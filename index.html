@@ -47,7 +47,7 @@
             font-family: 'Season VF', serif;
             font-weight: 420 900;
             font-variation-settings: 'wght' 420, 'SERF' 50;
-            font-feature-settings: 'liga' 1, 'dlig' 1, 'salt' 1, 'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1, 'ss05' 1, 'zero' 1;
+            font-feature-settings: 'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1, 'ss05' 1, 'zero' 1;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -111,6 +111,26 @@
             color: #fff;
         }
 
+        .buttondown-form {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .email-input {
+            font-family: 'Season VF', serif;
+            background-color: white;
+            color: #3D0011;
+            padding: clamp(0.8rem, 1.5vw, 1rem) clamp(1.2rem, 2vw, 1.5rem);
+            border: none;
+            border-radius: 25px;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            margin-bottom: clamp(6rem, 12vw, 12rem);
+            text-decoration: none;
+            font-variation-settings: 'wght' 300, 'SERF' 50;
+        }
+
         .subscribe-btn {
             font-family: 'Season VF', serif;
             background-color: #3D0011;
@@ -160,6 +180,19 @@
                 color: #fff;
                 margin-top: 1rem;
             }
+            .buttondown-form {
+                flex-direction: column;
+                width: 100%;
+                max-width: 400px;
+                gap: 0.5rem;
+            }
+            .email-input {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            .subscribe-btn {
+                width: 100%;
+            }
         }
 
         </style>
@@ -175,7 +208,17 @@
 'JA' at the end is pronounced 'yah'.">(BREY-thah-nes SMIH-thyah)</div>
         </div>
         <div class="date">JOURNEY BEGINS 01.01.2025</div>
-        <a href="mailto:breidanes@æ.is?subject=Breiðanes Smiðja&body=Please subscribe me." class="subscribe-btn">Subscribe</a>
+        <div class="subscribe-form">
+            <form
+                action="https://buttondown.com/api/emails/embed-subscribe/æ"
+                method="post"
+                target="popupwindow" 
+                onsubmit="window.open('https://buttondown.com/æ', 'popupwindow')"
+                class="buttondown-form">
+                <input type="email" name="email" class="email-input" placeholder="Enter your email"/>
+                <input type="submit" value="Subscribe" class="subscribe-btn"/>
+            </form>
+        </div>
         <div class="copyright">© 2025 <a href="http://æ.is" target="_blank">Afhverju Ekki</a></div>
     </div>
     </script>
