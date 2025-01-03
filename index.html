@@ -84,6 +84,11 @@
             text-transform: uppercase;
             font-variation-settings: 'wght' 500, 'SERF' 50;
             cursor: help;
+            transition: all 0.4s ease;
+        }
+        
+        h1:hover {
+            font-variation-settings: 'wght' 600, 'SERF' 50;
         }
         
         .pronunciation {
@@ -104,23 +109,26 @@
         }
 
         .subheading {
-            width: 60%;
+            width: 50%;
             font-size: clamp(2rem, 4vw, 3rem);
             margin-top: clamp(5rem, 10vw, 10rem);
             margin-bottom: auto;
             text-align: center;
             color: #fff;
+            transition: all 0.4s ease;
         }
 
         .subheading a {
             color: #fff;
             text-decoration-thickness: 0.1rem;
             text-underline-offset: 0.3rem;
+            transition: all 0.4s ease;
         }
         
         .subheading a:hover {
             text-decoration-thickness: 0.2rem;
-            text-underline-offset: 0.3rem;
+            text-underline-offset: 0.4rem;
+            font-variation-settings: 'wght' 500, 'SERF' 50;
         }
 
         .buttondown-form {
@@ -199,6 +207,11 @@
                 color: #fff;
                 margin-top: 1rem;
             }
+            .subheading {
+                width: 60%;
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+                transition: all 0.4s ease;
+            }
             .buttondown-form {
                 flex-direction: column;
                 width: 100%;
@@ -233,7 +246,7 @@
 <body>
     <div class="container">
         <div class="title-container">
-            <h1 title="The 'Ð/ð' (eth) is pronounced like 'th' in 'this'. 
+            <h1 class="heading" title="The 'Ð/ð' (eth) is pronounced like 'th' in 'this'. 
 'EI' sounds like 'ey' in 'they'. 
 'JA' at the end is pronounced 'yah'.">BREIÐANES SMIÐJA</h1>
             <div class="pronunciation" title="The 'Ð/ð' (eth) is pronounced like 'th' in 'this'. 
@@ -241,9 +254,9 @@
 'JA' at the end is pronounced 'yah'.">(BREY-thah-nes SMIH-thyah)</div>
         </div>
         <div class="subheading">
-            A <a href="https://airbnb.com/h/breidanes" target="_blank">guest house</a> &
-            <a href="https://instagram.com/breidanes.smidja" target="_blank">art residency</a> in
-            <a href="https://maps.app.goo.gl/i5eDKwh75n1KjHfS9" target="_blank">North Iceland</a>,
+            A <a href="https://airbnb.com/h/breidanes" class="subheading-link" target="_blank">guest house</a> &
+            <a href="https://instagram.com/breidanes.smidja" class="subheading-link" target="_blank">art-science residency</a> in
+            <a href="https://maps.app.goo.gl/i5eDKwh75n1KjHfS9" class="subheading-link" target="_blank">North Iceland</a>,
             curated by <a href="http://æ.is" target="_blank" title="Icelandic for 'Why Not'">Afhverju Ekki</a>.
         </div>
         <div class="subscribe-form">
